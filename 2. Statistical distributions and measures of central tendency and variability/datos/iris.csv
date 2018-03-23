@@ -1,0 +1,92 @@
+-ports (= 5.4.0-6ubuntu1~16.04.9cross1), libc6-mipsn32-mips64-cross (>= 2.23), libn32gcc1-mips64-cross
+Filename: pool/universe/g/gcc-5-cross-ports/libn32objc4-mips64-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb
+Size: 96220
+MD5sum: aa5e216253ff93528fcb5093f9371064
+SHA1: b522827931201adefeecdc58d6364e8347a8fd4f
+SHA256: 2c45360b2ad9bc035df802ae9215c3f8b0b6a6d895e56f66121cab0302d1f86c
+Homepage: http://gcc.gnu.org/
+Description: Runtime library for GNU Objective-C applications (n32)
+Description-md5: 6c3f3826368c5c8a95b9afb8628988b6
+
+Package: libn32objc4-mips64el-cross
+Architecture: all
+Version: 5.4.0-6ubuntu1~16.04.9cross1
+Built-Using: gcc-5 (= 5.4.0-6ubuntu1~16.04.9)
+Priority: extra
+Section: universe/devel
+Source: gcc-5-cross-ports (10ubuntu0.2)
+Origin: Ubuntu
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 441
+Depends: gcc-5-cross-base-ports (= 5.4.0-6ubuntu1~16.04.9cross1), libc6-mipsn32-mips64el-cross (>= 2.23), libn32gcc1-mips64el-cross
+Filename: pool/universe/g/gcc-5-cross-ports/libn32objc4-mips64el-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb
+Size: 98426
+MD5sum: 58ec5a99b294b7ccde7cb27eb37bc15c
+SHA1: d3c280670340e8486f87eac4d8d007c16cd4771f
+SHA256: 50fc5f4998aac5fa3bccea2aba51980dc61e23f91f389e7c2bf6f6a343d1c6bd
+Homepage: http://gcc.gnu.org/
+Description: Runtime library for GNU Objective-C applications (n32)
+Description-md5: 6c3f3826368c5c8a95b9afb8628988b6
+
+Package: libn32objc4-mipsel-cross
+Architecture: all
+Version: 5.4.0-6ubuntu1~16.04.9cross1
+Built-Using: gcc-5 (= 5.4.0-6ubuntu1~16.04.9)
+Priority: extra
+Section: universe/devel
+Source: gcc-5-cross-ports (10ubuntu0.2)
+Origin: Ubuntu
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 146
+Depends: gcc-5-cross-base-ports (= 5.4.0-6ubuntu1~16.04.9cross1), libc6-mipsn32-mipsel-cross (>= 2.23), libn32gcc1-mipsel-cross
+Filename: pool/universe/g/gcc-5-cross-ports/libn32objc4-mipsel-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb
+Size: 37476
+MD5sum: dd5c2a4ffbbaded03f25bcbdb7042365
+SHA1: 3d10c738bb8b952a91dbaee28a262e0a2752f7ba
+SHA256: 1b1eb7d350173b21b9cd10967c99dd474f786fe5860fe7d73f54ee8ad0210c7d
+Homepage: http://gcc.gnu.org/
+Description: Runtime library for GNU Objective-C applications (n32)
+Description-md5: 6c3f3826368c5c8a95b9afb8628988b6
+
+Package: libn32stdc++-5-dev-mips-cross
+Architecture: all
+Version: 5.4.0-6ubuntu1~16.04.9cross1
+Built-Using: gcc-5 (= 5.4.0-6ubuntu1~16.04.9)
+Priority: extra
+Section: universe/devel
+Source: gcc-5-cross-ports (10ubuntu0.2)
+Origin: Ubuntu
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 10129
+Depends: gcc-5-cross-base-ports (= 5.4.0-6ubuntu1~16.04.9cross1), libn32gcc-5-dev-mips-cross (= 5.4.0-6ubuntu1~16.04.9cross1), libn32stdc++6-mips-cross (>= 5.4.0-6ubuntu1~16.04.9cross1), libstdc++-5-dev-mips-cross (= 5.4.0-6ubuntu1~16.04.9cross1)
+Filename: pool/universe/g/gcc-5-cross-ports/libn32stdc++-5-dev-mips-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb
+Size: 578392
+MD5sum: 7b202a9dc9619fa719dab47adf2f16fb
+SHA1: 2434626a970dedbba126667676089b69ba1f3e0a
+SHA256: e8038e41c6d6647039e4294e321b0243d0b2368407134e7d3778dab5c6fb3899
+Homepage: http://gcc.gnu.org/
+Description: GNU Standard C++ Library v3 (development files) (mips)
+Description-md5: 05755abdfa063dbe6573ea1108a17f08
+
+Package: libn32stdc++-5-dev-mips64-cross
+Architecture: all
+Version: 5.4.0-6ubuntu1~16.04.9cross1
+Built-Using: gcc-5 (= 5.4.0-6ubuntu1~16.04.9)
+Priority: extra
+Section: universe/devel
+Source: gcc-5-cross-ports (10ubuntu0.2)
+Origin: Ubuntu
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 10129
+Depends: gcc-5-cross-base-ports (= 5.4.0-6ubuntu1~16.04.9cross1), libn32gcc-5-dev-mips64-cross (= 5.4.0-6ubuntu1~16.04.9cross1), libn32stdc++6-mips64-cross (>= 5.4.0-6ubuntu1~16.04.9cross1), libstdc++-5-dev-mips64-cross (= 5.4.0-6ubuntu1~16.04.9cross1)
+Filename: pool/universe/g/gcc-5-cross-ports/libn32stdc++-5-dev-mips64-cross_5.4.0-6ubuntu1~16.04.9cross1_all.deb
+Size: 578576
+MD5sum: 1f5c5320b4c1b2928983
