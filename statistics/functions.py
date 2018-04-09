@@ -80,7 +80,7 @@ def draw_bs_pairs_linreg(x, y, size=1):
 # Para conocer el número de 'bins' utilizamos la regla de Freedman-Diaconis
 
 def freedman_diaconis(data):
-    """Devuelve el número de óptimo de columnas de una histograma."""
+    """Devuelve el número de óptimo de columnas de un histograma."""
     # Calculamos los percentiles 25 y 75 para conocer el IQR
     percentile25, percentile75 = np.percentile(data, [25, 75])
     
@@ -94,6 +94,18 @@ def freedman_diaconis(data):
     number_bins = int(np.round((np.max(data) - np.min(data)) / h))
     
     return number_bins
+
+def num_bins(data):
+    """
+    Devuele el número óptimo de columnas para un histograma.
+    """
+    # longuitud del dataset
+    long = len(data)
+    
+    #calculo del número de bins
+    n_bins = int(np.sqrt(long))
+    
+    return n_bins
 
 
 def permutation_sample(data1, data2):
