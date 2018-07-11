@@ -45,12 +45,8 @@ def bootstrap_replicate_1d(data, func):
 def draw_bs_reps(data, func, size=1):
     """Draw bootstrap replicates."""
 
-    # Initialize array of replicates: bs_replicates
-    bs_replicates = np.empty(size)
-
     # Generate replicates
-    for i in range(size):
-        bs_replicates[i] = bootstrap_replicate_1d(data, func)
+    bs_replicates = [bootstrap_replicate_1d(data, func) for i in range(size)]
 
     return bs_replicates
     
@@ -148,7 +144,7 @@ def pearson_r(x, y):
 
 def draw_perm_reps1d(data_1, data_2, size=1):
     """
-    Nos realiza permutaciones sin repetición de un set de datos.
+    Realiza permutaciones sin repetición de un set de datos.
     """
     perm_coef = np.empty(size)
     
