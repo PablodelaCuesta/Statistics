@@ -1,0 +1,77 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+
+### Take a generative model for a spin
+To the right you have the R code that implements the generative model we just developed.
+
+* Run this code to generate a simulated dataset. Assume the underlying proportion of success of curing a zombie is 42% and that you administer the drug to 100 zombies.
+
+* Instead of representing cured zombies as a vector of 1s and 0s it could be represented as a count of the number of cured out of the total number of treated. 
+
+```{r}
+# Parameters
+prop_success <- 0.42
+n_zombies <- 100
+
+# Simulating data
+data <- c()
+for(zombie in 1:n_zombies) {
+  data[zombie] <- runif(1, min = 0, max = 1) < prop_success
+}
+data <- as.numeric(data)
+data <- sum(data)
+```
+
+### Take the binomial distribution for a spin
+
+It turns out that the generative model you ran last exercise already has a name. It's called the binomial process or the binomial distribution. In R you can use the rbinom function to simulate data from a binomial distribution. The rbinom function takes three arguments:
+
+* n The number of times you want to run the generative model
+* size The number of trials. (For example, the number of zombies you're giving the drug.)
+* prob The underlying proportion of success as a number between 0.0 and 1.0.
+
+(Video aquí)
+
+### How many visitors could your site get (1)?
+
+To get more visitors to your website you are considering paying for an ad to be shown 100 times on a popular social media site. According to the social media site, their ads get clicked on 10% of the time.
+
+```{r}
+# Fill in the parameters
+n_samples <- 100000
+n_ads_shown <- 100
+proportion_clicks <- 0.1
+n_visitors <- rbinom(n_samples, size = n_ads_shown, 
+                     prob = proportion_clicks)
+
+# Visualize n_visitors
+hist(n_visitors)
+```
+  
+
+### Adding a prior to the model
+
+You're not so sure that your ad will get clicked on exactly 10% of the time. Instead of assigning proportion_clicks a single value you are now going to assign it a large number of values drawn from a probability distribution.  
+
+
+
+
+
+
