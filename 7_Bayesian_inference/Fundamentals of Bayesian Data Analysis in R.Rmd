@@ -3,19 +3,6 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
-
-```{r}
-plot(cars)
-```
-
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
 
 
 ### Take a generative model for a spin
@@ -68,10 +55,34 @@ hist(n_visitors)
 
 ### Adding a prior to the model
 
-You're not so sure that your ad will get clicked on exactly 10% of the time. Instead of assigning proportion_clicks a single value you are now going to assign it a large number of values drawn from a probability distribution.  
+You're not so sure that your ad will get clicked on exactly 10% of the time. Instead of assigning proportion_clicks a single value you are now going to assign it a large number of values drawn from a probability distribution. 
+
+```{r}
+# Update proportion_clicks
+n_samples <- 100000
+n_ads_shown <- 100
+proportion_clicks <- runif(n = n_samples, min = 0.0, max = 0.2)
+n_visitors <- rbinom(n = n_samples, size = n_ads_shown, prob = proportion_clicks)
+
+# Visualize the results
+hist(proportion_clicks)
+hist(n_visitors)
+```
 
 
+### Update a Bayesian model with data
 
+You ran your ad campaign, and 13 people clicked and visited your site when the ad was shown a 100 times. You would now like to use this new information to update the Bayesian model.
+
+* The model you put together in the last exercise resulted in two vectors: (1) `proportion_clicks` that represents the uncertainty regarding the underlying proportion of clicks and (2) `n_visitors` which represents the uncertainty regarding the number of visitors you would get. We have now put these vectors into a data frame for you called prior.
+
+
+Bayes is flexible
+
+    You can include information sources in addition to the data.
+    You can make any comparisons between groups or data sets.
+    You can use the result of a Bayesian analysis to do Decision Analysis.
+    You can change the underlying statistical model.
 
 
 
